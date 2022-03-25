@@ -1,5 +1,5 @@
 # Chromium Network Logger
-This project made use of (Chrome remote interface)[https://github.com/cyrus-and/chrome-remote-interface] library to record a browser's network traffic *live* (ie. requests are displayed just like you opened `inspect` in chrome). However, minimal information is only displayed in the terminal while live.
+This project made use of [Chrome remote interface](https://github.com/cyrus-and/chrome-remote-interface) library to record a browser's network traffic *live* (ie. requests are displayed just like you opened `inspect` in chrome). However, minimal information is only displayed in the terminal while live.
 
 To obtained detailed information after the recording period, you are required to output the log to a file. 
 
