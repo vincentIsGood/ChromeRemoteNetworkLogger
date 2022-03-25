@@ -1,0 +1,18 @@
+{
+  "name": "testproject",
+  "version": "1.0.0",
+  "description": "npx chrome-remote-interface [args]",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "chrome-remote-interface": "^0.31.2"
+  },
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chrome-remote-interface": "^0.31.4"
+  }
+}
