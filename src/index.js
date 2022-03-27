@@ -15,7 +15,7 @@ const CONFIG = {
     local: true,
 };
 
-const URL = "https://google.com";
+const URL = "https://gogoanimeapp.com/mushoku-tensei-isekai-ittara-honki-dasu-2nd-season-episode-10";
 
 Logger.instance.setLevel(LogLevels.DEBUG);
 
@@ -31,7 +31,7 @@ Logger.instance.setLevel(LogLevels.DEBUG);
         try{
             logResult.sort((a, b)=> a.getReq().timestamp - b.getReq().timestamp);
         }catch(err){
-            // Prevent getReq() gives null
+            // Prevent getReq() giving null
             Logger.instance.error(`Log results cannot be sorted by timestamp (reason: ${err})`);
         }
         Logger.instance.log(logResult);
