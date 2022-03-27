@@ -6,6 +6,7 @@ import { prompt, rl } from "../lib/util.mjs";
 import fs from "fs";
 import ReqResEntry from "../lib/ReqResEntry.mjs";
 
+/// @config-check
 const OUTPUT_JSON_TO_FILE = false;
 const OUTPUT_FILE = "out.json";
 
@@ -15,13 +16,14 @@ const CONFIG = {
     local: true,
 };
 
-const URL = "https://gogoanimeapp.com/mushoku-tensei-isekai-ittara-honki-dasu-2nd-season-episode-10";
+const TARGET_URL = "https://google.com";
+/// @end-config-check
 
 Logger.instance.setLevel(LogLevels.DEBUG);
 
 (async ()=>{
     let context = await BrowserContext.create(CONFIG);
-    const networkLogger = new NetworkLogger(URL, context);
+    const networkLogger = new NetworkLogger(TARGET_URL, context);
     try{
         await networkLogger.setup(true);
         await networkLogger.loadPage();
