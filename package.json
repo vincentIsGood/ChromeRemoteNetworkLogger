@@ -1,8 +1,11 @@
 {
-  "name": "testproject",
+  "name": "networklogger",
   "version": "1.0.0",
   "description": "npx chrome-remote-interface [args]",
   "main": "index.js",
+  "bin": {
+    "chromenetlog": "./src/index.js"
+  },
   "type": "module",
   "dependencies": {
     "chrome-remote-interface": "^0.31.2"

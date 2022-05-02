@@ -36,6 +36,6 @@ assertObjectEquals(CONFIG, {
     port: 9222,
     local: true,
 });
-assertEquals(TARGET_URL, "https://google.com");
+assertEquals(TARGET_URL, "https://google.com/");
 
 console.log("[PreCommit] All good.");
