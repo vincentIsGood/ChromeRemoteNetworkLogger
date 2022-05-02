@@ -14,13 +14,30 @@ To start with debug mode, you need to do
 brave --remote-debugging-port=9222
 ```
 
-## Using Network Logger
-Since I have not implemented a command line for the logger yet, manual modification of configuration is required.
+## Command line
+Now, you can use the network logger without modifying your code (hopefully). A very basic command line is provided. You are allowed to create a tab to navigate to a `url` to log the tab's network traffic until `exit`.
+
+```sh
+# Use "npm link" to add this project index.js to path (only works on linux)
+chromenetlog <url>
+
+# otherwise
+
+npm run start <url>
+```
+
+Inside the program, you can use commands to fetch requests real-time. 
+
+To get started, use `list` to get a list of requests sent by the browser.
+
+For more commands, type `help` and use `man <cmd>` to get the manual of a command.
+
+## Configuration
+Detailed configuration can be done inside the code.
 
 To modify the configuration, modify the file `src/index.js`.
 ```ts
 // index.js
-
 const OUTPUT_JSON_TO_FILE = false;
 const OUTPUT_FILE = "out.json";
 
@@ -33,7 +50,7 @@ const CONFIG = {
     local: true,
 };
 
-const URL = "https://google.com";
+const TARGET_URL = "https://google.com";
 ```
 
 The above shows all parameters which you can use. The only sidenote is that `CDP.Options` comes from library `chrome-remote-interface`.
