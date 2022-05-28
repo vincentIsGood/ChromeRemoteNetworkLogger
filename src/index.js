@@ -49,7 +49,7 @@ if(process.argv[2]){
 
         cmdHandler = new CommandLineHandler(context, networkLogger);
 
-        while(!cmdHandler.handleCommand(await prompt("[+] Input command: ")));
+        while(!(await cmdHandler.handleCommand(await prompt("[+] Input command: "))));
         
         // Listing out everything.
         const logResult = networkLogger.store.getSequencedRequests();
