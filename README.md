@@ -1,7 +1,9 @@
 # Chromium Network Logger
 This project made use of [Chrome remote interface](https://github.com/cyrus-and/chrome-remote-interface) library to record a browser's network traffic *live* (ie. requests are displayed just like you opened `inspect` in chrome). However, minimal information is only displayed in the terminal while live.
 
-To obtained detailed information after the recording period, you are required to output the log to a file. 
+To obtain detailed information after the recording period, you are required to output the log to a file. 
+
+Chromium Network Logger is designed to **NOT** use chomium's debugger. This allows the program to not trigger any debugging breakpoints. Hence, it feels like opening a `Network` tab in an inspector without opening an inspector in your browser.
 
 ## Protocol
 Chrome DevTools Protocol (CDP) is used under the hood by Chrome remote interface to communicate with a chromium browser with *debug* mode turned on. To turn on debugging mode, you need to open a browser with option `--remote-debugging-port`.
