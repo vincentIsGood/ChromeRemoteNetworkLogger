@@ -108,6 +108,13 @@ class CommandLineHandler{
                 case "cookie":
                     console.log((await this.browserContext.getNetwork().getAllCookies()).cookies);
                     break;
+                case "frames":
+                    for(let [key, value] of this.networkLogger.subframes)
+                        console.log(key, value);
+                    break;
+                case "detectframes":
+                    this.networkLogger.captureIframeNetworkTraffic();
+                    break;
             }
         }catch(e){
             Logger.instance.err(e);

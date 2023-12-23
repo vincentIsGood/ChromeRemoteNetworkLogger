@@ -13,6 +13,9 @@ class CommandLineHelp{
         Logger.instance.info("reqbody");
         Logger.instance.info("resbody, body");
         Logger.instance.info("nav");
+        Logger.instance.info("cookie");
+        Logger.instance.info("frames");
+        Logger.instance.info("detectframes");
     }
 
     static printNavigationHelp(){
@@ -80,7 +83,21 @@ class CommandLineHelp{
                     "Get into document dom navigation mode", 
                     "");
                 break;
-            
+            case "cookie":
+                printManPage(cmd, 
+                    "Shows the cookies loaded for this tab", 
+                    "");
+                break;
+            case "frames":
+                printManPage(cmd, 
+                    "Get the subframes for root logger. Output is verbose", 
+                    "");
+                break;
+            case "detectframes":
+                printManPage(cmd, 
+                    "Detect for iframes in the root page and attach network logger to them", 
+                    "");
+                break;
             // Dom Navigation-specific commands
         }
     }
