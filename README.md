@@ -56,3 +56,8 @@ const TARGET_URL = "https://google.com";
 ```
 
 The above shows all parameters which you can use. The only sidenote is that `CDP.Options` comes from library `chrome-remote-interface`.
+
+## Detect iframes / subframes
+Although it is configured that it will detect iframes on `pageload`. However, for frames created dynamically 
+while using a web application `captureIframeNetworkTraffic`, you are required to spam `detectframes` command
+when you are sure a new iframe is created.
